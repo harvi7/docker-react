@@ -3,7 +3,7 @@ services:
     - docker 
 
 before_install:
-    - docker build -t harshvirani/docker-react -f Dockerfile.dev .
+    - docker build -t harsh/docker-react -f Dockerfile.dev .
 
-    script:
-        - docker run -e CI=true harshvirani/docker-react npm run test
+script:
+    - docker run -e CI=true harsh/docker-react npm run test
